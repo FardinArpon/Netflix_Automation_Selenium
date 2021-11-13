@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/junit/junit
+    testImplementation group: 'junit', name: 'junit', version: '4.13'
+
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.141.59'
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '3.141.59'
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+
+
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+
+    // https://mvnrepository.com/artifact/org.apache.poi/poi
+    implementation group: 'org.apache.poi', name: 'poi', version: '5.0.0'
+
+    // https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation group: 'org.testng', name: 'testng', version: '7.4.0'
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-remote-driver', version: '3.141.59'
+
+    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.15.0'
+
+}
+
+test {
+    useTestNG() {
+        suites "./testNG.xml"
+    }
+}
